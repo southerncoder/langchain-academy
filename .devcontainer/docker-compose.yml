@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  devcontainer:
+    image: mcr.microsoft.com/devcontainers/python:1.2.8-3.11-bullseye
+    ports:
+      - "2024:2024"
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
