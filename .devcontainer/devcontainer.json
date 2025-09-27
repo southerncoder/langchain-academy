@@ -8,10 +8,7 @@
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
   "workspaceFolder": "/workspace",
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [2024],
   // Use 'postCreateCommand' to run commands after the container is created.
-  "initializeCommand": "cd .devcontainer && ensure_port2024_free.bat --yes",
   "postCreateCommand": "pip install jupyterlab && pip3 install --user -r requirements.txt"
   // Configure tool-specific properties.
   // "customizations": {},

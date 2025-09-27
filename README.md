@@ -91,12 +91,12 @@ langgraph dev
 
 You should see the following output:
 ```
-- 🚀 API: http://127.0.0.1:2024
-- 🎨 Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024
-- 📚 API Docs: http://127.0.0.1:2024/docs
+- 🚀 API: http://127.0.0.1:<PORT>
+- 🎨 Studio UI: https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:<PORT>
+- 📚 API Docs: http://127.0.0.1:<PORT>/docs
 ```
 
-Open your browser and navigate to the Studio UI: `https://smith.langchain.com/studio/?baseUrl=http://127.0.0.1:2024`.
+Open your browser and navigate to the Studio UI using the URL displayed in the output.
 
 * To use Studio, you will need to create a .env file with the relevant API keys
 * Run this from the command line to create these files for module 1 to 5, as an example:
@@ -108,20 +108,4 @@ done
 echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 ```
 
-## ngrok port mapping automation
 
-To automatically detect the external port mapped to internal 2024 and start ngrok so you can always access via port 2024, use:
-
-```bash
-./ngrok_map_2024.sh
-```
-
-This script will:
-- Detect the external port mapped to internal 2024
-- Start ngrok to forward that port to 2024
-
-Make sure ngrok is installed and authenticated. The script must be executable:
-
-```bash
-chmod +x ngrok_map_2024.sh
-```
